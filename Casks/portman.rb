@@ -3,7 +3,7 @@ cask "portman" do
   name "portman"
   desc "See what's using your ports. Kill rogue processes. Wait for services."
   homepage "https://github.com/tasnimzotder/portman"
-  version "0.0.1-beta.3"
+  version "0.0.1-beta.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,12 +14,16 @@ cask "portman" do
   on_macos do
     on_intel do
       url "https://github.com/tasnimzotder/portman/releases/download/v#{version}/portman_#{version}_darwin_amd64.tar.gz"
-      sha256 "283e3aa90d318ceaecd58f45532f08873e9da0fa1a44303fe96beecfaf1b3dc2"
+      sha256 "05feed6d9d9adf0ca8f842210f5195b585c4583dbf1bd288c064df8f173ba414"
     end
     on_arm do
       url "https://github.com/tasnimzotder/portman/releases/download/v#{version}/portman_#{version}_darwin_arm64.tar.gz"
-      sha256 "f40412ab26c5122457d28070abf8f35c5e8bf3ef3a813417350ef787647acc74"
+      sha256 "11805c60a09989b39596ddf171cfb8160a89d9101ea99598f6ae901c29cfec20"
     end
+  end
+
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/portman"]
   end
 
   # No zap stanza required

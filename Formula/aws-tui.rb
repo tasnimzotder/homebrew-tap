@@ -1,30 +1,30 @@
 class AwsTui < Formula
   desc "Terminal UI for browsing AWS resources"
   homepage "https://github.com/tasnimzotder/aws-tui"
-  version "0.3.1-alpha"
+  version "0.4.0-alpha"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/tasnimzotder/aws-tui/releases/download/v0.3.1-alpha/aws-tui_0.3.1-alpha_darwin_amd64.tar.gz"
-      sha256 "b42fbdf2490027623f08b67f3f8cbd7671507ef7e7051663ace50def3fc6a36d"
+      url "https://github.com/tasnimzotder/aws-tui/releases/download/v0.4.0-alpha/aws-tui_0.4.0-alpha_darwin_amd64.tar.gz"
+      sha256 "e7f788aed11c54bfb88952dea39eb396a8df48264fa7e6c9503c93391933a6ae"
     end
 
     on_arm do
-      url "https://github.com/tasnimzotder/aws-tui/releases/download/v0.3.1-alpha/aws-tui_0.3.1-alpha_darwin_arm64.tar.gz"
-      sha256 "6e40042546c0ce2571d3d600f81b55b155b09049a49ff35d092d16a408824a7b"
+      url "https://github.com/tasnimzotder/aws-tui/releases/download/v0.4.0-alpha/aws-tui_0.4.0-alpha_darwin_arm64.tar.gz"
+      sha256 "3ede8576f3be476cedab5e7c804a9e87dc3aa351214ed438c97cc1fb3d9f3227"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/tasnimzotder/aws-tui/releases/download/v0.3.1-alpha/aws-tui_0.3.1-alpha_linux_amd64.tar.gz"
-      sha256 "ded38e0bd26b9852b0283d6e9b5c2c2f4a93c76a92a46b28a1ace842f162e8f0"
+      url "https://github.com/tasnimzotder/aws-tui/releases/download/v0.4.0-alpha/aws-tui_0.4.0-alpha_linux_amd64.tar.gz"
+      sha256 "bec2d305c42d51ae9271059cb2f30d76fb61573d4adea1347508e242e18a2698"
     end
 
     on_arm do
-      url "https://github.com/tasnimzotder/aws-tui/releases/download/v0.3.1-alpha/aws-tui_0.3.1-alpha_linux_arm64.tar.gz"
-      sha256 "c274025d783f254840f0440d503fad661a4c6146423d84280159689de2a44e4a"
+      url "https://github.com/tasnimzotder/aws-tui/releases/download/v0.4.0-alpha/aws-tui_0.4.0-alpha_linux_arm64.tar.gz"
+      sha256 "ae4122b8ba2275db86a6435811ba32f0b7074486cb0ec4e07b1c7bba970d2cbb"
     end
   end
 

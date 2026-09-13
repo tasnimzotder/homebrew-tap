@@ -1,8 +1,8 @@
 cask "caffeinator" do
-  version "0.1.3-alpha"
-  sha256 "c71c14c4a1665a975c197a1abdbe02c4b5c4a62f323afdf83c6af96531faa764"
+  version "0.1.4-alpha"
+  sha256 "99ad805eb0eb588209545cfda67f61ce75586498e20091dba4202459b3bece41"
 
-  url "https://github.com/tasnimzotder/caffeinator/releases/download/v0.1.3-alpha/Caffeinator_v0.1.3-alpha_aarch64.dmg"
+  url "https://github.com/tasnimzotder/caffeinator/releases/download/v0.1.4-alpha/Caffeinator_v0.1.4-alpha_aarch64.dmg"
   name "Caffeinator"
   desc "Minimal macOS menu bar app to keep your Mac awake"
   homepage "https://github.com/tasnimzotder/caffeinator"

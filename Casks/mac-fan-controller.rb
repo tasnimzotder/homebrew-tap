@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "mac-fan-controller" do
-  version "0.1.0-alpha"
-  sha256 "2c7fc580b996c34e7f4645caea848d728f18029e4e95b68f4b738a8abd5e6e6f"
+  version "0.1.1-alpha"
+  sha256 "f53f0babca68601d0ae2b0ff6d07011ba7a933ecdbf7219c6d0c115c6880bc43"
 
   url "https://github.com/tasnimzotder/mac-fan-controller/releases/download/v#{version}/MacFanController_v#{version}_aarch64.dmg"
   name "Mac Fan Controller"
@@ -20,6 +20,12 @@ cask "mac-fan-controller" do
 
   app "Mac Fan Controller.app"
 
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-r", "-d", "com.apple.quarantine", "{{appdir}}/Mac Fan Controller.app"],
+        writable_paths: ["Mac Fan Controller.app"], writable_base: :appdir
+  end
+
   uninstall quit:   "com.tasnimzotder.mac-fan-controller",
             script: {
               executable: "#{appdir}/Mac Fan Controller.app/Contents/MacOS/mac-fan-controller",
@@ -30,6 +36,7 @@ cask "mac-fan-controller" do
   zap trash: "~/Library/Application Support/Mac Fan Controller"
 
   caveats <<~EOS
+    This alpha is not notarized. Installation removes this app's download quarantine attribute.
     Enable the fan-control helper in the app's Settings and approve it in macOS.
     Before uninstalling, choose Apple automatic and remove the helper in Settings.
   EOS

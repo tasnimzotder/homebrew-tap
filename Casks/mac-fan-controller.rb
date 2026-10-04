@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "mac-fan-controller" do
-  version "0.1.2-alpha"
-  sha256 "37a155ba1d19771a89c43773455bdf0144a4da8d77fcf15e002bdbe0d9950b6a"
+  version "0.1.3-alpha"
+  sha256 "f0b8e06f4bebde13dd1e3f22981c21ca4507b2619fd68a22427208e11aa672f6"
 
   url "https://github.com/tasnimzotder/mac-fan-controller/releases/download/v#{version}/MacFanController_v#{version}_aarch64.dmg"
   name "Mac Fan Controller"
